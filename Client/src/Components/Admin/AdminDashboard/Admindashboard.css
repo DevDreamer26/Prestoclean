@@ -1,0 +1,50 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.admincontainer{
+    margin: 5% 11%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card-align{
+    display:flex;
+    flex-wrap: wrap;
+}
+.ordercard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    height: 120px;
+    background-color: rgb(210, 255, 208);
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+
+.ordercard > .header{
+    font-size: 20px;
+    margin : auto;
+}
+
+
+
+
+
+@media (max-width: 1300px){
+    .admincontainer{
+        margin:10% 13%;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 414px){
+    .admincontainer{
+        margin:20% 13%;
+        flex-direction: column;
+    }
+}
