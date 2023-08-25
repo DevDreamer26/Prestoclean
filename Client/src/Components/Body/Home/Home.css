@@ -261,7 +261,7 @@ img.intro-image{
 
 @media (max-width: 414px) {
     .container{
-        margin: 15% 13%;
+        margin: 20% 13%;
     }
     .intro {
       flex-direction: column;
