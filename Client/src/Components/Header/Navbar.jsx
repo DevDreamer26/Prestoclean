@@ -53,7 +53,7 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'green', // Change PRESTOCLEAN color to green
+              color: 'black', // Change PRESTOCLEAN color to green
               textDecoration: 'none',
             }}
           >
@@ -116,7 +116,7 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'green', // Change text color to black
+              color: 'black', // Change text color to black
               textDecoration: 'none',
             }}
           >

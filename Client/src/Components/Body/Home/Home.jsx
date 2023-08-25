@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     
-    if (sessionStorage.token) {
+    if (sessionStorage.access_token) {
       
          setIsloggedin(true)
 
