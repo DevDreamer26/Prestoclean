@@ -10,8 +10,11 @@ import './Schedule.css';
 export default function Schedule() {
   const tomorrow = dayjs().add(1, 'day');
 
-  const [Data, setData] = useState({});
+  const [Data, setData] = useState({
+    
+  });
 
+  
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(Data); // Log the Data state
@@ -75,6 +78,10 @@ export default function Schedule() {
             <div>
               <label htmlFor="landmark">Landmark</label>
               <input type="text" autoComplete="off" id="landmark" className="addressbox" onChange={handleInputChange} />
+            </div>
+            <div>
+              <label htmlFor="Phone no.">Phone no.</label>
+              <input type="text" autoComplete="off" id="Phone no." className="addressbox" onChange={handleInputChange} />
             </div>
 
             <button type="submit">Submit</button>
