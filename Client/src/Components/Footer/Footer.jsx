@@ -8,7 +8,7 @@ import LOGO from '../../assets/prestoclean.png'
 export default function Footer() {
   return (
     <div>
-        <div className='container-footer'>
+        <div className='container-footer' id='cnt'>
         <div className="footer-content">
           <section className="footer-section">
             <img src=

@@ -129,19 +129,20 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                Home
+                <a href="#">Home</a>
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                Services
+                <a href="#Service">Services</a>
+                
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                About Us
+                <a href="#cnt">Contact Us</a>
               </Button>
           </Box>
           
