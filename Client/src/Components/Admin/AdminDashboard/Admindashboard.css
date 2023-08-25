@@ -5,10 +5,12 @@ body{
     margin: 5% 11%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     
 }
 .card-align{
     display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .ordercard{
@@ -28,9 +30,48 @@ body{
     font-size: 20px;
     margin : auto;
 }
+.pending > .header {
+    font-size: 32px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.para-list {
+    display: flex;
+    flex-direction: row;
+    border: solid black 1px;
+}
+.para-list > .list{
+    padding: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
 
+.data-row {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .data-row li {
+    margin-right: 20px; /* Adjust this value for spacing between items */
+  }
+  .scrollable-table {
+    overflow: auto;
+    max-height: 300px; /* Adjust the maximum height as needed */
+  }
 
-
+ .table-cell-head{
+    font-size: 24px;
+    padding-left: 30px ;
+    padding-right: 30px;
+    text-align: center;
+ }
+ .table-cell-body{
+    padding-left: 30px ;
+    padding-right: 30px;
+    text-align: center;
+ }
 
 
 @media (max-width: 1300px){
