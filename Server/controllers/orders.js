@@ -9,12 +9,8 @@ import user from "../models/user.js";
 export const newOrder = async(req, res)=> {
 
 
-    const {shippinginfo,orderitems, orderreceived } = req.body;
-    let totalamaount = 0
+    const {shippinginfo, orderreceived } = req.body;
     
-    for (const orderItem of orderitems){
-        totalamaount+= orderItem.price * orderItem.quantity
-    }
     const user = req.user.id
     try {
         const order = new orders({
