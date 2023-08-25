@@ -10,48 +10,31 @@ const orderschema = new Schema ({
             type: String,
             required: true
         },
-        state:{
-            type: String,
-            required: true
-        },
-        country:{
-            type: String,
-            required: true
-        },
-        pincode:{
+        hno:{
             type: Number,
             required: true
+        },
+        Pincode:{
+            type: Number,
+            required: true
+        },
+        Landmark:{
+            type:Number,
+            required: true,
         },
         phoneno:{
             type: Number,
             required: true
+        },
+        name:{
+            type:String,
+            required:true,
+        },
+        pickupdate:{
+            type:Date,
+            required:true,
         }
     },
-    totalamaount:{
-        type: Number,
-        default: 0
-    },
-    orderitems:[
-        {
-            name:{
-                type: String,
-                required: true
-            },
-            price:{
-                type: Number,
-                required: true
-            },
-            quantity:{
-                type: Number,
-                required: true
-            },
-            product:{
-                type: mongoose.Schema.ObjectId,
-                ref: "items",
-                required: true
-            }
-        }
-    ],
     user:{
         type: mongoose.Schema.ObjectId,
         ref: "user",
