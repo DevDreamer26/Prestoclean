@@ -39,130 +39,131 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-    <AppBar position="static" sx={{ backgroundColor: 'white' }}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'green', // Change PRESTOCLEAN color to green
-              textDecoration: 'none',
-            }}
-          >
-            PRESTOCLEAN
-          </Typography>
-
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="green"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+      <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
               sx={{
-                display: { xs: 'block', md: 'none' },
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'green', // Change PRESTOCLEAN color to green
+                textDecoration: 'none',
               }}
             >
-
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Box display="flex" flexDirection="column" alignItems="center">
-                <a href ="/" style={{ textDecoration: 'none' }}>
-                  <Button sx={{ color: 'green' }} >Home</Button>
-                  </a>
-                  <Button sx={{ color: 'green' }}>Services</Button>
-                  <Button sx={{ color: 'green' }}>About Us</Button>
-                </Box>
-              </MenuItem>
+              PRESTOCLEAN
+            </Typography>
 
 
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'green', // Change text color to black
-              textDecoration: 'none',
-            }}
-          >
-            PRESTOCLEAN
-          </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="green"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: 'block', md: 'none' },
+                }}
+              >
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Box display="flex" flexDirection="column" alignItems="center">
+                    <a href="/" style={{ textDecoration: 'none' }}>
+                      <Button sx={{ color: 'green' }} >Home</Button>
+                    </a>
+                    <Button sx={{ color: 'green' }}>Services</Button>
+                    <Button sx={{ color: 'green' }}>About Us</Button>
+                  </Box>
+                </MenuItem>
+
+
+              </Menu>
+            </Box>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'green', // Change text color to black
+                textDecoration: 'none',
+              }}
+            >
+              PRESTOCLEAN
+            </Typography>
+
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                <a href="#">Home</a>
+                <a href="#" style={{ textDecoration: 'none', color: 'black' }}>Home</a>
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                <a href="#Service">Services</a>
-                
+                <a href="#Service" style={{ textDecoration: 'none', color: 'black' }}>Services</a>
+
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                <a href="#cnt">Contact Us</a>
+                <a href="#cnt" style={{ textDecoration: "none", color: 'black' }}>Contact Us</a>
               </Button>
-          </Box>
-          
-          <Button
-            variant="outlined"
-            onClick={() => {
-              Navigate('/login')
-            }}
-            sx={{
-              color: 'green', // Apply green color to the button text
-              borderColor: 'green', // Apply green color to the button border
-            }}
-          >
-            Login
-          </Button>
-          
-        </Toolbar>
-      </Container>
-    </AppBar>
+            </Box>
+
+            <Button
+              variant="outlined"
+              onClick={() => {
+                Navigate('/login')
+              }}
+              sx={{
+                color: 'green', // Apply green color to the button text
+                borderColor: 'green', // Apply green color to the button border
+              }}
+            >
+              Login
+            </Button>
+
+          </Toolbar>
+        </Container>
+      </AppBar>
     </div>
   );
 }
 export default Navbar;
+
