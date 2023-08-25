@@ -31,7 +31,7 @@ const orderschema = new Schema ({
             required:true,
         },
         pickupdate:{
-            type:Date,
+            type:String,
             required:true,
         }
     },

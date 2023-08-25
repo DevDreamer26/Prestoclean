@@ -25,7 +25,12 @@ const connectdb = async()=>{
 
 
 
-app.use(cors({origin: 'http://localhost:5173'}))
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true, // Allow credentials
+    allowedHeaders: ['Content-Type', 'Authorization', 'Set-Cookie'],
+  }));
+  
 app.use(express.json())
 app.use(cookieParser())
 app.use('/api', auth)

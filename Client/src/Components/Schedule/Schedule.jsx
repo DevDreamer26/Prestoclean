@@ -15,9 +15,29 @@ export default function Schedule() {
     date: tomorrow.toISOString(),
   });
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async(event) => {
     event.preventDefault();
-    console.log(Data); // Log the Data state
+    try {
+      const response = await fetch('http://localhost:8000/api/place/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${sessionStorage.token}`, // Replace with actual token
+        },
+        body: JSON.stringify(Data),
+        credentials: 'include', // Allow cookies to be sent
+      });
+      
+
+      if (response.ok) {
+        console.log('Data submitted successfully');
+        // You can navigate to a success page or reset the form here
+      } else {
+        console.log('Failed to submit data');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }; // Log the Data state
   };
 
   const handleInputChange = (event) => {
@@ -31,7 +51,7 @@ export default function Schedule() {
   const handleDateChange = (newDate) => {
     setData((prevData) => ({
       ...prevData,
-      date: newDate.toISOString(), // Capture selected date
+      pickupdate: newDate.toISOString(), // Capture selected date
     }));
   };
 
@@ -74,22 +94,22 @@ export default function Schedule() {
           <form onSubmit={handleFormSubmit}>
           <div>
               <label htmlFor="name">Name</label>
-              <input type="number" autoComplete="off" id="name" className="addressbox" onChange={handleInputChange} />
+              <input type="text" autoComplete="off" id="name" className="addressbox" onChange={handleInputChange} />
             </div>
 
           <div>
               <label htmlFor="pno">Phone no</label>
-              <input type="number" autoComplete="off" id="pno" className="addressbox" onChange={handleInputChange} />
+              <input type="number" autoComplete="off" id="phoneno" className="addressbox" onChange={handleInputChange} />
             </div>
 
             <div>
               <label htmlFor="houseNo">House no</label>
-              <input type="number" autoComplete="off" id="houseNo" className="addressbox" onChange={handleInputChange} />
+              <input type="number" autoComplete="off" id="hno" className="addressbox" onChange={handleInputChange} />
             </div>
 
             <div>
               <label htmlFor="pincode">Pincode</label>
-              <input type="number" autoComplete="off" id="pincode" className="addressbox" onChange={handleInputChange} />
+              <input type="number" autoComplete="off" id="Pincode" className="addressbox" onChange={handleInputChange} />
             </div>
 
             <div>
@@ -98,7 +118,7 @@ export default function Schedule() {
             </div>
             <div>
               <label htmlFor="landmark">Landmark</label>
-              <input type="text" autoComplete="off" id="landmark" className="addressbox" onChange={handleInputChange} />
+              <input type="text" autoComplete="off" id="Landmark" className="addressbox" onChange={handleInputChange} />
             </div>
 
             <button type="submit">Submit</button>
