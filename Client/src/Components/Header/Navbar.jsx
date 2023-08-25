@@ -142,7 +142,7 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                About Us
+                <a href="#cnt">Contact Us</a>
               </Button>
           </Box>
           
