@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     
-    if (sessionStorage.token) {
+    if (sessionStorage.access_token) {
       
          setIsloggedin(true)
 
@@ -51,7 +51,7 @@ export default function Home() {
       <div className='container'>
         <div className='intro'>
           <div className='intro-text'>
-            <div className='intro-topic'><span className='companytitle'>PrestoClean</span>: <span>Where Clean is a Guarantee, Not a Miracle!</span></div>
+            <div className='intro-topic'><span className='companytitle'>PRESTO CLEAN</span>: Freshness Delivered, Every Wear!<span></span></div>
             <div>
             <div className='intro-para'>
             <p>
@@ -72,25 +72,25 @@ export default function Home() {
           <div className='header'>How it works</div>
           <div className='card-align'>
             <div className='card'>
-            <h3>This is option 1</h3>
-            <p className="small">Card description with lots of great facts and interesting details.</p>
+            <h3>Schedule</h3>
+            <p className="small">Schedule via our website, we are available for you </p>
             </div>
             <div className='card'>
-            <h3>This is option 1</h3>
-            <p className="small">Card description with lots of great facts and interesting details.</p>
+            <h3>Pickup</h3>
+            <p className="small">After you schedule, we will collect from your doorstep</p>
             </div>
             <div className='card'>
-            <h3>This is option 1</h3>
-            <p className="small">Card description with lots of great facts and interesting details.</p>
+            <h3>Clean</h3>
+            <p className="small">Your clothes are expertly cleaned according to the PrestoClean service you select.</p>
             </div>
             <div className='card'>
-            <h3>This is option 1</h3>
-            <p className="small">Card description with lots of great facts and interesting details.</p>
+            <h3>Deliver</h3>
+            <p className="small">Our Standard turnaround time is 48 Hrs*. We are commited to deliver as earliest as possible</p>
             </div>
             </div>
           </div>
 
-          <div className='section3'>
+          <div className='section3' id = 'Service'>
           <div className='header'>Services</div>
           <div className='card-align'>
             <a className='card' href='/'>
@@ -130,3 +130,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+

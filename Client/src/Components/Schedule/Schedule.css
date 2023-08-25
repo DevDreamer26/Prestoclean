@@ -5,14 +5,18 @@
 
 .scheduleheader {
 
-  font-size: 30px;
+  font-size: 40px;
   font-family: poppins;
   width: 100%;
   text-align: center;
 }
 
-.date {
-  margin-top: 15px;
+
+.date > h2 {
+  font-size: 30px;
+}
+.details > h2 {
+  font-size: 30px;
 }
 
 /* Styling for the date picker card */
@@ -74,7 +78,7 @@ button {
   margin: 20px;
   background: rgb(142, 255, 142);
   border: 2px solid black;
-  font-size: large;
+  font-size: 20px;
   cursor: pointer;
 }
 
