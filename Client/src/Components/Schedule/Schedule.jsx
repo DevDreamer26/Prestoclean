@@ -6,11 +6,14 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import './Schedule.css';
+import Navbar from '../Header/Navbar';
 
 export default function Schedule() {
   const tomorrow = dayjs().add(1, 'day');
 
-  const [Data, setData] = useState({});
+  const [Data, setData] = useState({
+    date: tomorrow.toISOString(),
+  });
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -25,7 +28,17 @@ export default function Schedule() {
     }));
   };
 
+  const handleDateChange = (newDate) => {
+    setData((prevData) => ({
+      ...prevData,
+      date: newDate.toISOString(), // Capture selected date
+    }));
+  };
+
+
   return (
+    <>
+    <Navbar/>
     <div className='schedulecontainer'>
       <div className='scheduleheader'>
         Schedule a pickup
@@ -48,6 +61,7 @@ export default function Schedule() {
                 <DatePicker
                   minDate={tomorrow}
                   defaultValue={tomorrow}
+                  onChange={handleDateChange}
                 />
               </DemoItem>
             </DemoContainer>
@@ -58,8 +72,18 @@ export default function Schedule() {
 
         <div>
           <form onSubmit={handleFormSubmit}>
+          <div>
+              <label htmlFor="name">Name</label>
+              <input type="number" autoComplete="off" id="name" className="addressbox" onChange={handleInputChange} />
+            </div>
+
+          <div>
+              <label htmlFor="pno">Phone no</label>
+              <input type="number" autoComplete="off" id="pno" className="addressbox" onChange={handleInputChange} />
+            </div>
+
             <div>
-              <label htmlFor="houseNo">House no.</label>
+              <label htmlFor="houseNo">House no</label>
               <input type="number" autoComplete="off" id="houseNo" className="addressbox" onChange={handleInputChange} />
             </div>
 
@@ -82,5 +106,6 @@ export default function Schedule() {
         </div>
       </div>
     </div >
+    </>
   );
 }
