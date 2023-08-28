@@ -3,7 +3,7 @@ import "./Footer.css"
 import {BsDashLg} from "react-icons/bs"
 import {AiFillInstagram,AiFillTwitterCircle,AiFillYoutube} from "react-icons/ai"
 import {MdLocationPin,MdCall,MdMail,MdOutlineFacebook,} from 'react-icons/md'
-import LOGO from '../../assets/prestoclean.png'
+import LOGO from '../../assets/prestocleantrans.png'
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="footer-content">
           <section className="footer-section">
             <img src=
-            {LOGO} alt="prestocleanlogo" style={{width:"95%"}}/>
+            {LOGO} alt="prestocleanlogo" style={{width:"100%"}}/>
             <p> PRESTO CLEAN <BsDashLg/> Your Trusted Laundry Service in Guwahati. We take pride in providing premium laundry solutions to the vibrant community of Guwahati</p>
           </section>
 

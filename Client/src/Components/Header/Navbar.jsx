@@ -97,7 +97,7 @@ function Navbar() {
                       <Button sx={{ color: 'green' }} >Home</Button>
                     </a>
                     <Button sx={{ color: 'green' }}>Services</Button>
-                    <Button sx={{ color: 'green' }}>About Us</Button>
+                    <Button sx={{ color: 'green' }}>Contact Us</Button>
                   </Box>
                 </MenuItem>
 
