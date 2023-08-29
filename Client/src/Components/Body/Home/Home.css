@@ -12,7 +12,7 @@ body {
 .color {
   margin-top: 50px;
   width: 100%;
-  height: 150px;
+  /* height: 1200px; */
   background-color: #dcffcc;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -21,7 +21,13 @@ body {
   border-radius: 15px;
   font-size: 20px;
   align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+}
+.color-p{
+  padding: 20px;
+  font-size: larger;
 
+  
 }
 
 .home-container {
@@ -51,8 +57,10 @@ body {
 .intro-text {
   align-self: flex-start;
   width: auto;
+  
 
 }
+
 
 .intro-topic {
   font-size: 40px;
@@ -83,7 +91,8 @@ body {
 .intro-para {
   max-width: 100%;
   margin-top: 10%;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 10px;
   color: rgb(112, 110, 110);
 }
 
@@ -322,6 +331,7 @@ body {
 @media (max-width: 1300px) {
   .intro {
     flex-direction: column;
+  
   }
 
   .intro-topic {
