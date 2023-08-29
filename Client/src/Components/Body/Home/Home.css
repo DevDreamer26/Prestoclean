@@ -12,22 +12,23 @@ body {
 .color {
   margin-top: 50px;
   width: 100%;
-  /* height: 1200px; */
+  height: 500px;
   background-color: #dcffcc;
-  color: rgb(0, 0, 0);
+  color: #000;
   text-align: center;
   /* font-size: 40px; */
   padding: 10px;
   border-radius: 15px;
   font-size: 20px;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,121,0.3169642857142857) 34%);
 }
 .color-p{
-  padding: 20px;
-  font-size: larger;
+  margin: 50px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
 
-  
 }
 
 .home-container {
@@ -91,29 +92,39 @@ body {
 .intro-para {
   max-width: 100%;
   margin-top: 10%;
+  margin-right: 10px;
   font-size: 20px;
   padding: 10px;
   color: rgb(112, 110, 110);
 }
 
 .schedulebutton {
-  background-color: #085228;
+  background-color: rgb(72, 163, 110);
   color: #ffffff;
   width: 300px;
-  height: 80px;
-  border-radius: 50px;
-  font-size: 26px;
+  height: 100px;
+  border-radius: 80px;
+  
+  
   font-family: 'Poppins', sans-serif;
+}
+.sch{
+  font-size: 22px;
+  padding: 15px 0;
+  font-weight: bold;
 }
 
 .section2 {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  background: rgb(72, 163, 110);
+  border-radius: 15px;
   /* background-color: #A8DF8E; */
 }
 
 .section2>.header {
+  color: rgb(255, 255, 255);
   font-size: 35px;
   margin-top: 5px;
   margin-bottom: 25px;
@@ -122,8 +133,8 @@ body {
 
 .section2>.card-align {
   padding-top: 50px;
-  border-radius: 10px;
-  background: #d8fcc8;
+  border-radius: 15px;
+  background: #e0ebda;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -171,7 +182,7 @@ body {
     z-index: -1;
     top: -16px;
     right: -16px;
-    background: #A8DF8E;
+    background: rgb(72, 163, 110);
     height: 40px;
     width: 40px;
     border-radius: 32px;
@@ -182,6 +193,7 @@ body {
 
   &:hover:before {
     transform: scale(21);
+    color: #fff;
   }
 }
 
@@ -214,6 +226,7 @@ body {
   p {
     transition: all 0.3s ease-out;
     color: rgba(255, 255, 255, 0.8);
+    
   }
 
   h3 {
@@ -229,10 +242,14 @@ body {
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 50px;
+  background:#e0ebda;
+  border-radius: 25px;
 }
 
 .section3>.header {
-  font-size: 35px;
+  color: #000;
+  font-weight: 500;
+  font-size: 40px;
   margin-top: 150px;
   margin-bottom: 35px;
   text-align: center;
@@ -245,8 +262,8 @@ body {
 }
 
 .section3>.card-align>.card>h3 {
-  color: #262626;
-  font-size: 17px;
+  color: #000000;
+  font-size: 22px;
   line-height: 24px;
   font-weight: 700;
   margin: 0px;
@@ -275,7 +292,7 @@ body {
   width: 100%;
   height: 260px;
   max-width: 300px;
-  background-color: #FFDBAA;
+  background-color: rgb(72, 163, 110);
   border-radius: 20px;
   margin-right: 2%;
   margin-bottom: 5%;
