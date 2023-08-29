@@ -93,8 +93,9 @@ export default function Home() {
           </div>
         </div>
         <div className='color'>
-          <p>INDIA’S NO. 1 LAUNDRY & DRY-CLEANING
-BRAND </p>
+          <p>We will do everything we can to return your clothes to you in great shape. In the rare instance that an item goes missing or is damaged during the cleaning process, we’ll reimburse you up to the maximum of 7-10 times of processing value amount.
+
+</p>
         </div>
         <div className='section3' id='Service'>
           <div className='header'>Our Services</div>
