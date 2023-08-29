@@ -46,12 +46,13 @@ export default function Home() {
 
 
   return (
-    <div>
+    <>
+    <div className='home-main'>
       <Navbar />
-      <div className='container'>
+      <div className='home-container'>
         <div className='intro'>
           <div className='intro-text'>
-            <div className='intro-topic'><span className='companytitle'>PRESTO CLEAN</span> Freshness Delivered, Every Wear!<span></span></div>
+            <div className='intro-topic'><span className='companytitle'>PRESTO CLEAN</span> <br />Freshness Delivered, Every Wear!</div>
             <div>
               <div className='intro-para'>
                 <p>
@@ -64,7 +65,7 @@ export default function Home() {
               <button className='schedulebutton' onClick={handleSchedulePickup}>Schedule a pickup</button>
             </div>
           </div>
-          <img className='intro-image' src={Laundry} alt='washing maching' />
+          <div className='intro-image'><img className="intro-image" style={{maxWidth: "650px", height: "auto"}} src={Laundry} alt='washing maching' /></div>
 
 
         </div>
@@ -92,6 +93,8 @@ export default function Home() {
           </div>
         </div>
         <div className='color'>
+          <p>INDIA’S NO. 1 LAUNDRY & DRY-CLEANING
+BRAND </p>
         </div>
         <div className='section3' id='Service'>
           <div className='header'>Our Services</div>
@@ -130,8 +133,10 @@ export default function Home() {
 
       </div>
       <button onClick={clearsession}>Logout</button>
-      <Footer />
+     
     </div>
+    <Footer />
+    </>
   )
 }
 

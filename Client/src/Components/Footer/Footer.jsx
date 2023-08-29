@@ -27,17 +27,18 @@ export default function Footer() {
 
           </section>
 
-          <section className="footer-section">
-            <h3>Social Media</h3>
-            <p>Follow us on social media for updates.</p>
-            <p><MdOutlineFacebook />     <AiFillInstagram /> <AiFillTwitterCircle/> <AiFillYoutube/></p>
-          </section>
+         
 
           <section className="footer-section">
             <h3>Company</h3>
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>
             <p>Our services</p>
+          </section>
+          <section className="footer-section">
+            <h3>Social Media</h3>
+            <p>Follow us on social media for updates.</p>
+            <p><MdOutlineFacebook style={{fontSize:'40px',cursor:'pointer'}}/>     <AiFillInstagram style={{fontSize:'40px',cursor:'pointer'}}/> <AiFillTwitterCircle style={{fontSize:'40px',cursor:'pointer'}}/> <AiFillYoutube style={{fontSize:'40px',cursor:'pointer'}}/></p>
           </section>
         </div>
 
