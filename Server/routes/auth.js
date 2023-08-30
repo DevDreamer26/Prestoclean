@@ -9,6 +9,9 @@ const router = express.Router()
 
 
 
+
+router.post('/auth/sendotp', sendotp)
+router.post('/auth/verifyotp', verifyotp)
 router.post('/auth/signup', signup)
 router.post('/auth/login', login)
 router.post('/auth/logout', logout)

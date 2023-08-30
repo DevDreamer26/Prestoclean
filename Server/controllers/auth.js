@@ -3,9 +3,72 @@ import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
 import crypto from "crypto"
 import sendEmail from "../sendEmail.js"
+import OTP from "../models/otp.js"
+import twilio from 'twilio'
 
 
 
+
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+
+const client = twilio(accountSid, authToken);
+
+// Generate a random OTP
+function generateOTP() {
+  return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+// Send OTP via SMS
+export const sendotp = async (req, res) => {
+  const phoneNumber = req.body.phoneNumber;
+
+  if (!phoneNumber) {
+    return res.status(400).json({ error: 'Phone number is required.' });
+  }
+
+  const otp = generateOTP();
+
+  try {
+    await OTP.create({ phoneNumber, otp });
+
+    client.messages.create({
+      body: `Your OTP: ${otp}. It will expire in 5 minutes`,
+      from: twilioPhoneNumber,
+      to: phoneNumber,
+    });
+
+    res.json({ message: 'OTP sent successfully.' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to send OTP.' });
+  }
+};
+
+// Verify OTP
+export const verifyotp = async (req, res) => {
+  const phoneNumber = req.body.phoneNumber;
+  const userOTP = req.body.otp;
+
+  if (!phoneNumber || !userOTP) {
+    return res.status(400).json({ error: 'Phone number and OTP are required.' });
+  }
+
+  try {
+    const otpDocument = await OTP.findOne({ phoneNumber, otp: userOTP });
+
+    if (otpDocument) {
+      await otpDocument.deleteOne();
+      res.json({ message: 'OTP verified successfully.' });
+    } else {
+      res.status(401).json({ error: 'Invalid OTP.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to verify OTP.' });
+  }
+};
 
 
 
