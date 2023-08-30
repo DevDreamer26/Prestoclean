@@ -15,21 +15,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { useState } from 'react';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const defaultTheme = createTheme();
 
 export default function Signup() {
@@ -151,3 +136,5 @@ const [errorMessage, setErrorMessage] = useState(''); // State for error message
     </ThemeProvider>
   );
 }
+
+
