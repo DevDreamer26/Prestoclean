@@ -22,7 +22,6 @@ function App() {
           <Route path="/Admin_login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
           <Route path = '/Admin_Dashboard' element={<Admindashboard/>}/>
-
         </Routes>
       </Router>
     </>
