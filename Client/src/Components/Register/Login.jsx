@@ -18,10 +18,9 @@ import { Cookies, useCookies } from 'react-cookie';
 // Define your custom theme or import the defaultTheme if available
 const theme = createTheme();
 
-export default function Login() {
+export default function Login({setIsAdminAuthenticated}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [cookie, setCookie] = useCookies([])
   const [errorMessage, setErrorMessage] = useState(''); // State for error message
 
   const navigate = useNavigate();
@@ -33,7 +32,8 @@ export default function Login() {
       const res = await axios.post("http://localhost:8000/api/auth/login", { email, password });
       if (res.data) {
         console.log(res.data);
-        navigate('/');
+        navigate('/Admin_Dashboard');
+        setIsAdminAuthenticated(true)
         sessionStorage.setItem('token', res.data.token)
 
       } else {

@@ -6,8 +6,10 @@ import {
   Typography,
   Paper,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-const OtpLogin = () => {
+const OtpLogin = ({setIsAdminAuthenticated}) => {
+  const navigate = useNavigate()
   const [phoneNumber, setPhoneNumber] = useState('');
   const [otp, setOtp] = useState('');
   const [isOtpSent, setIsOtpSent] = useState(false);
@@ -22,13 +24,15 @@ const OtpLogin = () => {
     // Here, you would typically verify the OTP with the backend API and log the user in.
     // For this example, we'll just simulate a successful login.
     alert('Login successful!');
+    setIsAdminAuthenticated(true)
+    navigate('/schedule')
   };
 
   return (
     <Container maxWidth="xs">
       <Paper elevation={3} className="otp-login">
         <Typography variant="h4" align="center" gutterBottom>
-          OTP Login
+          PrestoClean OTP Login
         </Typography>
         {isOtpSent ? (
           <div>
