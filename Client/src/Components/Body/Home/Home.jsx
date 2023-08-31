@@ -36,7 +36,7 @@ export default function Home() {
       <div className='container'>
         <div className='intro'>
           <div className='intro-text'>
-            <div className='intro-topic'><span className='companytitle'>PrestoClean</span>: <span>Where Clean is a Guarantee, Not a Miracle!</span></div>
+            <div className='intro-topic'><span className='companytitle'>PRESTO CLEAN</span>: <span>Where Clean is a Guarantee, Not a Miracle!</span></div>
             <div>
             <div className='intro-para'>
             <p>
